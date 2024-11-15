@@ -1,46 +1,108 @@
 ---
 marp: true
-theme: default
+theme: bespoke
+class: lead
 paginate: true
+backgroundColor: #f7f7f7
+backgroundImage: 'linear-gradient(45deg, #6a11cb 0%, #2575fc 100%)'
 ---
 
-# Introdução
+<style>
+  h1, h2 {
+    color: #ffffff;
+  }
+  p, li {
+    color: #e0e0e0;
+    font-size: 18px;
+  }
+  code {
+    background-color: #f5f5f5;
+    color: #b83729;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+</style>
 
-<p>O artigo <strong>"Instrumentação de Sistemas Distribuídos para Visibilidade Operacional"</strong>, publicado na <a href="https://aws.amazon.com/pt/builders-library/instrumenting-distributed-systems-for-operational-visibility/">Biblioteca de Criadores da AWS</a>, é uma leitura essencial para desenvolvedores e arquitetos de sistemas que buscam compreender a importância da instrumentação eficaz em ambientes distribuídos.</p>
+# O Que é Instrumentação em Sistemas Distribuídos?
 
----
-
-## Resumo do Conteúdo
-
-<p>O artigo aborda as melhores práticas para implementar a instrumentação em sistemas complexos, garantindo uma visibilidade detalhada que permite identificar e solucionar problemas de desempenho e disponibilidade. A instrumentação adequada é destacada como fundamental para monitorar o estado de diferentes componentes e fluxos de dados em tempo real.</p>
-
----
-
-## Temas Principais
-
-<ul>
-    <li><strong>Métricas e Logs</strong>: A importância de coletar métricas precisas e manter registros detalhados que possibilitem rastrear e correlacionar eventos.</li>
-    <li><strong>Distribuição e Complexidade</strong>: Desafios específicos de sistemas distribuídos e como a fragmentação pode dificultar a observação.</li>
-    <li><strong>Técnicas de Instrumentação</strong>: Soluções práticas para coletar dados eficazmente, incluindo a inserção de rastreamento distribuído.</li>
-    <li><strong>Alertas e Automonitoramento</strong>: Implementação de gatilhos para que o sistema responda de maneira proativa a eventos indesejados.</li>
-</ul>
-
----
-
-## Benefícios da Instrumentação Eficaz
-
-<p>A leitura fornece insights sobre como a visibilidade operacional aprimora a capacidade de resposta da equipe de TI, reduzindo o tempo de detecção e resolução de incidentes. Sistemas bem instrumentados não apenas fornecem dados em tempo real, mas também permitem análises históricas que suportam melhorias contínuas.</p>
+Instrumentação em sistemas distribuídos é o processo de adicionar pontos de medição para coletar dados sobre o comportamento e desempenho do sistema, similar à utilização de sensores em um veículo.
 
 ---
 
-## Recomendações
+# Analogia com Veículos
 
-<p>Recomenda-se que desenvolvedores e equipes de operações utilizem as práticas destacadas neste artigo como um guia para projetar e manter sistemas resilientes e de alto desempenho. A integração de ferramentas de monitoramento e a adoção de um mindset orientado a dados são cruciais para o sucesso em um ambiente de sistemas distribuídos.</p>
+- **Semelhança:** Assim como sensores em um carro monitoram a velocidade e o nível de combustível, a instrumentação em sistemas de TI captura métricas críticas de operação.
+- **Importância:** Fundamental para monitorar e otimizar a operação em ambientes distribuídos e complexos.
 
 ---
 
-## Conclusão
+# Por Que Instrumentar?
 
-<p>Este artigo da Biblioteca de Criadores da AWS é um recurso valioso para quem busca aprimorar o design e a manutenção de sistemas distribuídos. Ele fornece diretrizes práticas e fundamentadas na experiência da AWS em operar sistemas em grande escala, ajudando a garantir que as aplicações sejam observáveis e responsivas.</p>
+- **Visibilidade:** Facilita a visualização do desempenho do sistema em tempo real.
+- **Diagnóstico rápido:** Permite identificar rapidamente a origem de falhas ou problemas de desempenho.
+- **Otimização contínua:** Ajuda a melhorar a eficiência e reduzir custos ao identificar gargalos.
 
-<p>Para acessar o artigo completo e aprofundar-se no tema, visite a <a href="https://aws.amazon.com/pt/builders-library/instrumenting-distributed-systems-for-operational-visibility/">página oficial da AWS Builders' Library</a>.</p>
+---
+
+# Benefícios da Instrumentação
+
+1. **Monitoramento em tempo real:** Dashboards atualizados com indicadores vitais do sistema.
+2. **Diagnóstico de problemas:** Facilidade para rastrear problemas reportados por usuários.
+3. **Otimização de desempenho:** Identificação de gargalos e pontos de ineficiência.
+4. **Previsão de problemas:** Capacidade de antecipar falhas antes que impactem significativamente os usuários.
+
+---
+
+# Exemplo Prático: Amazon
+
+- **Front-end:** Monitoramento de interações do usuário e performance da interface.
+- **Back-end:** Análise de resposta dos serviços de recomendação e bancos de dados.
+- **Rede:** Avaliação de latência e estabilidade da conexão.
+
+---
+
+# Definições e Conceitos Expandidos
+
+- **Instrumentação detalhada:** Implementação de código e ferramentas para o monitoramento contínuo de latência, tráfego de rede, uso de recursos e falhas.
+
+---
+
+# Funcionamento Detalhado
+
+- **Agentes de software:** Incorporados ao código da aplicação para registrar eventos e métricas.
+- **Ferramentas externas:** Monitoram a infraestrutura sobre a qual as aplicações operam.
+
+---
+
+# Casos de Uso Detalhados
+
+1. **Gerenciamento de performance**
+2. **Monitoramento de saúde do sistema**
+3. **Análise de segurança**
+4. **Cumprimento de SLAs**
+
+---
+
+# Características da Instrumentação
+
+- **Tempo real e histórico:** Análise instantânea e retrospectiva.
+- **Granularidade ajustável:** Detalhamento conforme necessidade.
+- **Extensibilidade:** Integração com outras ferramentas e sistemas.
+
+---
+
+# Vantagens e Desafios
+
+**Vantagens:**
+- **Proatividade:** Identificação precoce de problemas.
+- **Otimização de recursos:** Uso eficiente, redução de custos.
+
+**Desafios:**
+- **Complexidade técnica:** Implementação e manutenção complexas.
+- **Impacto no desempenho:** Potencial degradação se mal projetada.
+
+---
+
+# Conclusão
+
+A instrumentação é essencial, atuando como o sistema nervoso de aplicações distribuídas, crucial para diagnósticos precisos e otimização contínua.
