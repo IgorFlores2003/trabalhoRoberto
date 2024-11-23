@@ -4,20 +4,21 @@ theme: bespoke
 class: lead
 paginate: true
 backgroundColor: #f7f7f7
-backgroundImage: 'linear-gradient(45deg, #6a11cb 0%, #2575fc 100%)'
+backgroundImage: 'url(https://i.pinimg.com/originals/76/a6/5a/76a65a926d6276eaca577d4d1a22bfb5.jpg)'
 ---
 
 <style>
   h1, h2 {
-    color: #ffffff;
+    color: #EF8E1E;
+    margin-top: 0;
   }
   p, li {
-    color: #e0e0e0;
-    font-size: 18px;
+    color: #FFFFFF;
+    font-size: 27px;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
   code {
-    background-color: #f5f5f5;
-    color: #b83729;
     padding: 2px 4px;
     border-radius: 4px;
   }
@@ -26,9 +27,6 @@ backgroundImage: 'linear-gradient(45deg, #6a11cb 0%, #2575fc 100%)'
 # O Que é Instrumentação em Sistemas Distribuídos?
 
 Instrumentação em sistemas distribuídos é o processo de adicionar pontos de medição para coletar dados sobre o comportamento e desempenho do sistema, similar à utilização de sensores em um veículo.
-
-![Analogia entre carro e sistemas distribuídos](1145360_1.jpg.png)
-
 
 ---
 
