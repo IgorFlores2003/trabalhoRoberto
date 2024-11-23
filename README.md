@@ -19,6 +19,7 @@ backgroundImage: 'url(https://i.pinimg.com/originals/76/a6/5a/76a65a926d6276eaca
     margin-bottom: 20px;
   }
   code {
+    
     padding: 2px 4px;
     border-radius: 4px;
   }
@@ -51,6 +52,7 @@ Instrumentação em sistemas distribuídos é o processo de adicionar pontos de 
 2. **Diagnóstico de problemas:** Facilidade para rastrear problemas reportados por usuários.
 3. **Otimização de desempenho:** Identificação de gargalos e pontos de ineficiência.
 4. **Previsão de problemas:** Capacidade de antecipar falhas antes que impactem significativamente os usuários.
+   
 
 ---
 
@@ -60,6 +62,80 @@ Instrumentação em sistemas distribuídos é o processo de adicionar pontos de 
 - **Back-end:** Análise de resposta dos serviços de recomendação e bancos de dados.
 - **Rede:** Avaliação de latência e estabilidade da conexão.
 
+---
+
+```java
+public GetProductInfoResponse getProductInfo(GetProductInfoRequest 
+request) { 
+ 
+  // check our local cache 
+  ProductInfo info = localCache.get(request.getProductId()); 
+   
+  // check the remote cache if we didn't find it in the local cache 
+  if (info == null) { 
+    info = remoteCache.get(request.getProductId()); 
+  
+ localCache.put(info); 
+  } 
+   
+  // finally check the database if we didn't have it in either cache 
+  if (info == null) { 
+    info = db.query(request.getProductId()); 
+  
+ localCache.put(info); 
+ remoteCache.put(info); 
+  } 
+   
+  return info; 
+}
+
+```
+# Exemplo Prático: Amazon
+
+---
+
+
+```java
+public GetProductInfoResponse getProductInfo(GetProductInfoRequest 
+request) { 
+ 
+  // Which product are we looking up? 
+  // Who called the API? What product category is this in? 
+ 
+  // Did we find the item in the local cache? 
+  ProductInfo info = localCache.get(request.getProductId()); 
+   
+  if (info == null) { 
+    // Was the item in the remote cache? 
+    // How long did it take to read from the remote cache? 
+    // How long did it take to deserialize the object from the cache? 
+    info = remoteCache.get(request.getProductId()); 
+  
+    // How full is the local cache? 
+    localCache.put(info); 
+  } 
+   
+Instrumentando sistemas distribuídos para visibilidade operacional 
+// finally check the database if we didn't have it in either cache 
+if (info == null) { 
+// How long did the database query take? 
+// Did the query succeed?  
+// If it failed, is it because it timed out? Or was it an invalid 
+query? Did we lose our database connection? 
+// If it timed out, was our connection pool full? Did we fail to 
+connect to the database? Or was it just slow to respond? 
+info = db.query(request.getProductId()); 
+// How long did populating the caches take?  
+// Were they full and did they evict other items?  
+localCache.put(info); 
+remoteCache.put(info); 
+} 
+// How big was this product info object?  
+return info; 
+} 
+
+```
+# Exemplo Prático: Amazon
 ---
 
 # Definições e Conceitos Expandidos
