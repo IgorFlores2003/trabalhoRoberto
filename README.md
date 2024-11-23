@@ -27,6 +27,9 @@ backgroundImage: 'linear-gradient(45deg, #6a11cb 0%, #2575fc 100%)'
 
 Instrumentação em sistemas distribuídos é o processo de adicionar pontos de medição para coletar dados sobre o comportamento e desempenho do sistema, similar à utilização de sensores em um veículo.
 
+![Analogia entre carro e sistemas distribuídos](1145360_1.jpg.png)
+
+
 ---
 
 # Analogia com Veículos
