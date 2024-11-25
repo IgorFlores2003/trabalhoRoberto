@@ -183,3 +183,10 @@ return info;
 # Conclusão
 
 A instrumentação é essencial, atuando como o sistema nervoso de aplicações distribuídas, crucial para diagnósticos precisos e otimização contínua.
+
+---
+
+# Muito Obrigado pela atenção
+
+![Joinha](https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif)
+
