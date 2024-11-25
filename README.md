@@ -25,6 +25,14 @@ backgroundImage: 'url(https://i.pinimg.com/originals/76/a6/5a/76a65a926d6276eaca
   }
 </style>
 
+# *Instrumentação em Sistemas Distribuídos**
+
+### **Alunos:**
+- **Igor Flore**
+- **Walter Aparecido**
+
+---
+
 # O Que é Instrumentação em Sistemas Distribuídos?
 
 Instrumentação em sistemas distribuídos é o processo de adicionar pontos de medição para coletar dados sobre o comportamento e desempenho do sistema, similar à utilização de sensores em um veículo.
@@ -186,7 +194,7 @@ A instrumentação é essencial, atuando como o sistema nervoso de aplicações 
 
 ---
 
-# Muito Obrigado pela atenção
+# Muito Obrigado pela atenção !!
 
 ![Joinha](https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif)
 
