@@ -28,7 +28,7 @@ backgroundImage: 'url(https://i.pinimg.com/originals/76/a6/5a/76a65a926d6276eaca
 # *Instrumentação em Sistemas Distribuídos*
 
 ### **Alunos:**
-- **Igor Flore**
+- **Igor Flores**
 - **Walter Aparecido**
 
 ---
